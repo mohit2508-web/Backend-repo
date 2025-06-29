@@ -18,4 +18,17 @@ app.use(express.urlencoded({
 
 app.use(express.static("public"))
 app.use(cookieParser())
+
+// routes import 
+// Temporary test - replace with your actual full path
+import userRouter from './routes/user.route.js'
+
+
+// routes declaration
+app.use("/api/v1/users",userRouter)
+
+
+
+// http://localhost:8000/users/login
+
 export {app}
